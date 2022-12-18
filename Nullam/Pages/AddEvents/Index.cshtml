@@ -1,0 +1,25 @@
+﻿@page
+@model Nullam.Pages.AddEvents.IndexModel
+@{
+}
+
+<br>
+<h2>List of Events</h2>
+<a class='btn btn-primary btn-sm' href='/AddEvents/Add'>New Event</a>
+<table class="table">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Event Date</th>
+			<th>Event Location</th>
+			<th>Additional Information</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(var item in Model.listEvents)
+		{
+			
+		}
+	</tbody>
+</table>
