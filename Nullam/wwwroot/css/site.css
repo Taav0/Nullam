@@ -1,11 +1,12 @@
 html {
   font-size: 14px;
+  ;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+        }
 }
 
 html {
@@ -14,5 +15,40 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    background-color: #EEF1F4;
+    margin-bottom: 60px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 600px 600px;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.grid-item-1 {
+    background-color: #28599C;
+    color: white;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.grid-item-2 {
+    
+}
+.grid-item-3 {
+    
+}
+.grid-item-4 {
+   
+}
+
+.main_color {
+    background-color: #28599C;
+}
+.event_table {
+    background-color: #28599C;
+    color: white;
+    padding-top:15px;
+    padding-bottom:15px;
+    
 }
