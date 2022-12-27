@@ -1,0 +1,40 @@
+﻿@page
+@model Nullam.Pages.Events.IndexModel
+@{
+}
+
+<br>
+
+<h2>Ürituste nimekiri</h2>
+<a class='btn btn-primary btn-sm' href='/Events/Create'>Lisa Üritus</a>
+<table class="table">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Event Date</th>
+			<th>Event Location</th>
+			<th>Info</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model.listEvents)
+		{
+				<tr>
+
+					<td>@item.id</td>
+					<td>@item.name</td>
+					<td>@item.eventDate</td>
+					<td>@item.eventLocation</td>
+					<td>@item.info</td>
+					
+					<td>
+						<a class="btn btn-primary btn-sm" href="/Events/Edit?id=@item.id">Muuda</a>
+						<a class="btn btn-danger btn-sm" href="/Events/Delete?id=@item.id">Kustuta</a>
+					</td>
+				</tr>
+		}
+		
+	</tbody>
+</table>

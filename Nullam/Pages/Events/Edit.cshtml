@@ -1,10 +1,9 @@
 ﻿@page
-@model Nullam.Pages.Clients.EditModel
+@model Nullam.Pages.Events.EditModel
 @{
 }
-
 <br>
-<h2>Muuda Osavõtja</h2>
+<h2>Muuda üritust</h2>
 
 @if (Model.errorMessage.Length > 0)
 {
@@ -15,31 +14,31 @@
 }
 
 <form method="POST">
-	<input type= "hidden" name="=id" value="@Model.clientInfo.id" />
 	<div class="row mb-3">
-		<lable class="col-sm-3 col-form-label">Name</lable>
+		<lable class="col-sm-3 col-form-label">Ürituse nimi</lable>
 		<div class="col-sm-6">
-			<input type="text" class="form-control" name="name" value="@Model.clientInfo.name">
+			<input type="text" class="form-control" name="name" value="@Model.eventInfo.name">
 		</div>
 	</div>
 
 	<div class="row mb-3">
-		<lable class="col-sm-3 col-form-label">Email</lable>
+		<lable class="col-sm-3 col-form-label">Toimumis Kuupäev</lable>
 		<div class="col-sm-6">
-			<input type="text" class="form-control" name="email" value="@Model.clientInfo.email">
+			<input type="text" class="form-control" name="eventDate" value="@Model.eventInfo.eventDate">
 		</div>
 	</div>
 	<div class="row mb-3">
-		<lable class="col-sm-3 col-form-label">Phone</lable>
+		<lable class="col-sm-3 col-form-label">Toimumise koht</lable>
 		<div class="col-sm-6">
-			<input type="text" class="form-control" name="phone" value="@Model.clientInfo.phone">
+			<input type="text" class="form-control" name="eventLocation" value="@Model.eventInfo.eventLocation">
 		</div>
 	</div>
 	<div class="row mb-3">
-		<lable class="col-sm-3 col-form-label">Address</lable>
+		<lable class="col-sm-3 col-form-label">Lisa Info</lable>
 		<div class="col-sm-6">
-			<input type="text" class="form-control" name="address" value="@Model.clientInfo.address">
+			<input type="text" class="form-control" name="info" value="@Model.eventInfo.info">
 		</div>
+
 	</div>
 
 	@if (Model.successMessage.Length > 0)
@@ -56,8 +55,8 @@
 
 	<div class="row mb-3">
 		<div class="offset-sm-3 col-sm-3 d-grid">
-			<button type="submit" class="btn btn-primary">Muuda</button>
-			</div>
+			<button type="submit" class="btn btn-primary">Sisesta</button>
+		</div>
 		<div class="col-sm-3 d-grid">
 			<a class="btn btn-outline-primary" href="/" role="button">Tühista</a>
 		</div>

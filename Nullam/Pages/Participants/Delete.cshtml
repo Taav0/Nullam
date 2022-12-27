@@ -10,7 +10,7 @@
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                String sql = "DELETE * FROM clients WHERE id=@id";
+            String sql = "DELETE FROM private_participants WHERE id=@id";
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
                     command.Parameters.AddWithValue("@id", id);
@@ -23,7 +23,7 @@
         {
             
         }
-        Response.Redirect("/Clients/Index");
+    Response.Redirect("/Participants/Index");
     
     
 }

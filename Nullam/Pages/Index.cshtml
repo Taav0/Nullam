@@ -1,5 +1,5 @@
 ﻿@page
-@model IndexModel
+@model Nullam.Pages.Events.IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
@@ -20,36 +20,30 @@
 				<div class="event_table">Tulevased Üritused</div>
             <table class="table">
 		        <tbody>
-			        <tr>
-				        <td>1</td>
-				        <td>In ornare quam</td>
-				        <td>29.12.2022</td>
-				        <td>
-					        <a class="btn " href="/Clients/Index">
-								        Osavõtjad</a>
-				        </td>
+						@foreach (var item in Model.listEvents)
+						{
+						<tr>
+							<td>@item.id</td>
+							<td>@item.name</td>
+							<td>@item.eventDate</td>
 							<td>
-								<a class="btn " href="/Clients/Delete?id=id">
-									<img src="./images/remove.svg" />
-								</a>
+								<a class="btn btn_participants" href="/Participants/Index">Osavõtjad</a>
 							</td>
-			        </tr>
-
-					<tr>
-				        <td>2</td>
-				        <td>In ornare quam</td>
-				        <td>30.12.2022</td>
-				        <td>
-					        <a class="btn " href="/Clients/Delete?id=id">
-								        Osavõtjad</a>
-				        </td>
-							<td>
-								<a class="btn " href="/Clients/Delete?id=id">
-									<img src="./images/remove.svg" />
-								</a>
-							</td>
-			        </tr>
+								<td>
+									<a class="btn_remove" href="/Events/Delete?id=@item.id">
+										<img src="./images/remove.svg"/>
+									</a>
+								</td>
+						</tr>
+						}
+						
+					
+					
 			</table>
+				<div class="btn_addEvent">
+					<a class='btn' href='/Events/Create'>LISA ÜRITUS</a>
+				</div>
+				
         </div>
        
         <div class="grid-item-4">
@@ -61,12 +55,10 @@
 				        <td>In ornare quam</td>
 				        <td>17.05.2022</td>
 				        <td>
-					        <a class="btn " href="/Clients/Delete?id=id">
-								        Osavõtjad
-							        </a>
+					        <a class="btn" href="/Clients/Index">Osavõtjad</a>
 				        </td>
 			        </tr>
-		
+					
 				</tbody>
 			</table>
             </div>
