@@ -20,7 +20,7 @@
 				<div class="event_table">Tulevased Üritused</div>
             <table class="table">
 		        <tbody>
-						@foreach (var item in Model.listEvents)
+						@foreach (var item in Model.listEvents )
 						{
 						<tr>
 							<td>@item.id</td>
@@ -41,7 +41,7 @@
 					
 			</table>
 				<div class="btn_addEvent">
-					<a class='btn' href='/Events/Create'>LISA ÜRITUS</a>
+					<a class='btn btn_participants' href='/Events/Create'>LISA ÜRITUS</a>
 				</div>
 				
         </div>
