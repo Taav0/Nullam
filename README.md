@@ -20,4 +20,4 @@ This will get a copy of the project installed locally.
 Open with Visual Studio and run application
 
 ## Built With
-Visual Studio 2019 and SQL Management Studio
+Visual Studio 2022 and SQL Management Studio
