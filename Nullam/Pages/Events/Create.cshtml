@@ -1,0 +1,81 @@
+﻿@page
+@model Nullam.Pages.Events.CreateModel
+@{
+}
+<br>
+<div class="addEvent_grid_container">
+	<div class="addEvent_gridItem_1">
+		<h3>Ürituse lisamine</h3>
+	</div>
+
+	<div class="addEvent_gridItem_2">
+		<img src="~/images/libled.jpg" />
+		</div>
+
+	
+
+	<div class="addEvent_gridItem_3">
+
+		<h4 style="color: #28599C; ">Ürituse lisamine</h4>
+
+	@if (Model.errorMessage.Length > 0)
+	{
+		<div class='alert alert-warning alert-dismissible fade show' role='alert'>
+			<strong>@Model.errorMessage</strong>
+			<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+		</div>
+	}
+
+	<form method="POST">
+		<div class="row mb-3">
+			<lable class="col-sm-3 col-form-label">Ürituse nimi:</lable>
+			<div class="col-sm-6">
+				<input type="text" class="form-control" name="name" value="@Model.eventInfo.name">
+			</div>
+		</div>
+
+		<div class="row mb-3">
+			<lable class="col-sm-3 col-form-label">Toimumisaeg: </lable>
+			<div class="col-sm-6">
+				<input type="datetime-local" class="form-control" name="eventDate" value="@Model.eventInfo.eventDate">
+			</div>
+		</div>
+		<div class="row mb-3">
+			<lable class="col-sm-3 col-form-label">Koht:</lable>
+			<div class="col-sm-6">
+				<input type="text" class="form-control" name="eventLocation" value="@Model.eventInfo.eventLocation">
+			</div>
+		</div>
+		<div class="row mb-3">
+			<lable class="col-sm-3 col-form-label">Lisainfo:</lable>
+			<div class="col-sm-6">
+				<input type="text" class="form-control" name="info" value="@Model.eventInfo.info">
+			</div>
+	
+		</div>
+
+		@if (Model.successMessage.Length > 0)
+		{
+			<div class="row mb-3">
+				<div class="col-sm-9">
+					<div class='alert alert-success alert-dismissible fade show' role='alert'>
+						<strong>@Model.successMessage</strong>
+						<button type='button' class='btn-close' data-bs-dismiss='alert' aria-lable='Close'></button>
+					</div>
+				</div>
+			</div>
+		}
+
+		<div class="row mb-3">
+			<div class="offset-sm-3 col-sm-3 d-grid">
+				<button type="submit" class="btn btn-primary">Sisesta</button>
+			</div>
+			<div class="col-sm-3 d-grid">
+				<a class="btn btn-outline-primary" href="/" role="button">Tühista</a>
+			</div>
+		</div>
+	</form>
+
+	</div>
+
+</div>

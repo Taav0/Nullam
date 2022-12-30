@@ -1,12 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Data.SqlClient;
 
-namespace Nullam.Pages
+
+namespace Nullam.Pages.Events
 {
-    public class IndexModel : PageModel
-    {
-		public List<EventsInfo> listEvents = new List<EventsInfo>();
+	public class IndexModel : PageModel
+	{
+		public List<EventInfo> listEvents = new List<EventInfo>();
 		public void OnGet()
 		{
 			try
@@ -23,16 +24,14 @@ namespace Nullam.Pages
 						{
 							while (reader.Read())
 							{
-								EventsInfo eventInfo = new EventsInfo();
-								eventInfo.id = "" + reader.GetInt32(0);
-								eventInfo.name = reader.GetString(1);
-								eventInfo.eventDate = reader.GetString(2);
-								eventInfo.eventLocation = reader.GetString(3);
-								eventInfo.info = reader.GetString(4);
+								EventInfo EventInfo = new EventInfo();
+								EventInfo.id = "" + reader.GetInt32(0);
+								EventInfo.name = reader.GetString(1);
+								EventInfo.eventDate = reader.GetString(2);
+								EventInfo.eventLocation = reader.GetString(3);
+								EventInfo.info = reader.GetString(4);
 								
-
-
-								listEvents.Add(eventInfo);
+								listEvents.Add(EventInfo);
 							}
 						}
 					}
@@ -44,15 +43,14 @@ namespace Nullam.Pages
 			}
 		}
 	}
-	public class EventsInfo
+	public class EventInfo
 	{
 		public String id;
 		public String name;
 		public String eventDate;
 		public String eventLocation;
 		public String info;
-		
-
+	
 
 	}
 

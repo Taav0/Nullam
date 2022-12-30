@@ -1,18 +1,123 @@
 html {
   font-size: 14px;
+  
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+
+    html {
+        font-size: 16px;
+    }
+
+
+    html {
+        position: relative;
+        min-height: 100%;
+    }
+
+    body {
+        background-color: #EEF1F4;
+        margin-bottom: 60px;
+        max-width: 100vw !important;
+    }
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+    .container {
+        display: flex;
+        max-width: 1220px;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 600px 600px;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 20px;
+    }
+
+    .grid-item-1 {
+        background-color: #28599C;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+.addEvent_grid_container, .events_grid_container, .participants_container, .edit_event_grid_container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 3fr;
 }
 
-body {
-  margin-bottom: 60px;
+.addEvent_gridItem_1, .events_gridItem_1, .participants_gridItem_1, .edit_event_gridItem_1 {
+    background-color: #28599C;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 75px;
+}
+
+.addEvent_gridItem_2, .events_gridItem_2, .participants_gridItem_2, .edit_event_gridItem_2 {
+    overflow: hidden;
+    height: 75px;
+}
+
+.addEvent_gridItem_3, .participants_gridItem_3, .edit_event_gridItem_3 {
+    display: grid;
+    padding-left: 25px;
+    padding-bottom: 100px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    /*justify-content: center;*/
+    align-items: center;
+}
+
+    .main_color {
+        background-color: #28599C;
+    }
+
+    .event_table {
+        font-weight: 600;
+        background-color: #28599C;
+        color: white;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .btn_participants {
+        display: flex;
+        padding: 0;
+        vertical-align: middle;
+        font-weight: 500;
+    }
+
+    .btn_remove {
+        display: flex;
+        /*justify-content:center;*/
+        height: 25px;
+        width: 25px;
+    }
+
+    .btn_addEvent {
+        display: flex;
+        justify-content: left;
+        margin-left: 50px;
+        font-weight: 600;
+    }
+
+.btn-primary {
+    background-color: #28599C;
+}
+
+.btn-outline-primary {
+    color: #28599C;
+    border-color: #28599C;
+}
+.btn-outline-primary:hover{
+    background-color: lightgray;
+}
+.btn_eventList_addEvent{
+    width: 100px;
 }

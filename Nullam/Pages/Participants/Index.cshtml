@@ -1,0 +1,55 @@
+﻿@page
+@model Nullam.Pages.Participants.IndexModel
+@{
+}
+
+
+<br>
+<div class="addEvent_grid_container">
+	
+	<div class="addEvent_gridItem_1">
+		<h2>Osavõtjad</h2>
+		</div>
+
+	<div class="addEvent_gridItem_2">
+			<img src="~/images/libled.jpg" />
+	</div>
+
+	<div class="addEvent_gridItem_3">
+
+		<h4 style="color: #28599C; ">Osavõtjad</h4>
+
+		<!--<a class='btn btn-primary btn-sm' href='/Participants/Create'>Lisa Osaleja</a>-->
+		
+		<table class="table">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Eesnimi</th>
+					<th>Perekonna nimi</th>
+					<th>Isikukood</th>
+					<th>Makse meetod</th>
+					<th>Lisainfo</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var item in Model.listParticipants)
+				{
+					<tr>
+				
+						<td>@item.id</td>
+						<td>@item.firstName</td>
+						<td>@item.lastName</td>
+						<td>@item.securityNumber</td>
+						<td>@item.paymentMethod</td>
+						<td>@item.additionalInfo</td>
+						<td>
+							<a class="btn btn-primary btn-sm" href="/Participants/Edit?id=@item.id">Muuda</a>
+							<a class="btn btn-danger btn-sm" href="/Participants/Delete?id=@item.id">Kustuta</a>
+						</td>
+					</tr>
+				}
+			</tbody>
+			</table>
+		</div>
+</div>
