@@ -86,12 +86,14 @@ html {
         padding-bottom: 15px;
     }
 
-    .btn_participants {
-        display: flex;
-        padding: 0;
-        vertical-align: middle;
-        font-weight: 500;
-    }
+.btn_participants {
+    display: flex;
+    padding: 0;
+    vertical-align: middle;
+    font-weight: bold;
+    opacity: 0.6;
+    font-size: 16px;
+}
 
     .btn_remove {
         display: flex;
@@ -118,6 +120,6 @@ html {
 .btn-outline-primary:hover{
     background-color: lightgray;
 }
-.btn_eventList_addEvent{
+.btn_eventList_addEvent, .btn_ptList_addpt {
     width: 100px;
 }

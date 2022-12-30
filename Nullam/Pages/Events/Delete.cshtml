@@ -10,6 +10,7 @@
         using (SqlConnection connection = new SqlConnection(connectionString))
         {
             connection.Open();
+            
             String sql = "DELETE FROM events WHERE id=@id";
             using (SqlCommand command = new SqlCommand(sql, connection))
             {

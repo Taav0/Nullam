@@ -1,7 +1,7 @@
 CREATE TABLE events (
-	id INT NOT NULL PRIMARY KEY IDENTITY,
+	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	name VARCHAR (100) NOT NULL,
-	eventDate smalldatetime NULL,
+	eventDate VARCHAR(100) NULL,
 	eventLocation VARCHAR (100) null,
 	info VARCHAR (250)
 	);
