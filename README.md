@@ -1,7 +1,3 @@
-<p align="center">
-<img src="https://github.com/Shpakovsky94/checkify-app/blob/master/03-frontend/angular-checkify/src/assets/images/logo.png" width="300">
- </p>
-
 # Welcome to Nullam App
  
 ## Introduction
