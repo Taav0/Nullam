@@ -18,7 +18,7 @@ git clone https://github.com/Taav0/Nullam.git
 This will get a copy of the project installed locally.
 
 In order for the database to work, it is necessary to change Database connectionString Data Source in all .cshtml.cs files
-"String connectionString = "Data Source=DESKTOP-H7MTA24;Initial Catalog=nullam;Integrated Security=True";"
+"String connectionString = "Data Source=**DESKTOP-H7MTA24**;Initial Catalog=nullam;Integrated Security=True";"
 
 Open with Visual Studio and run application
 
