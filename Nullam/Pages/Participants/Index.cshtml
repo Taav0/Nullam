@@ -19,37 +19,81 @@
 
 		<h4 style="color: #28599C; ">Osavõtjad</h4>
 
-		<!--<a class='btn btn-primary btn-sm' href='/Participants/Create'>Lisa Osaleja</a>-->
+		<a class='btn btn-primary btn-sm btn_ptList_addpt' href='/Participants/Create'>Lisa Osaleja</a>
 		
-		<table class="table">
-			<thead>
-				<tr>
-					<th>ID</th>
-					<th>Eesnimi</th>
-					<th>Perekonna nimi</th>
-					<th>Isikukood</th>
-					<th>Makse meetod</th>
-					<th>Lisainfo</th>
-				</tr>
-			</thead>
-			<tbody>
-				@foreach (var item in Model.listParticipants)
-				{
-					<tr>
+		<!-- ÕIGE TEST	-->
+
+	
+			
+		<!--
+			foreach (var item in Model.listEvents)
+			{
+				<form>
+				<div>
+					<lable>Ürituse nimi: </lable> <input type="text" value="item.name">
+				</div>
+
+				<div>
+					<lable>Toimumiseaeg: </lable> <input type="text" value="item.eventDate">
+				</div>
+
+				<div>
+					<lable>Ürituse koht: </lable> <input type="text" value="item.eventLocation">
+				</div>
+
+				<div>
+					<lable>Osavõtjad: </lable> <input type="text" value="Mari Maasikas">
+				</div>
 				
-						<td>@item.id</td>
-						<td>@item.firstName</td>
-						<td>@item.lastName</td>
-						<td>@item.securityNumber</td>
-						<td>@item.paymentMethod</td>
-						<td>@item.additionalInfo</td>
-						<td>
-							<a class="btn btn-primary btn-sm" href="/Participants/Edit?id=@item.id">Muuda</a>
-							<a class="btn btn-danger btn-sm" href="/Participants/Delete?id=@item.id">Kustuta</a>
-						</td>
-					</tr>
-				}
-			</tbody>
-			</table>
+
+			
+		
+			
+				</form>
+			}
 		</div>
-</div>
+-->
+		<!-- ÕiGE TEST LÕPP-->
+		
+				
+		
+		
+		
+		
+
+				<table class="table">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Eesnimi</th>
+							<th>Perekonna nimi</th>
+							<th>Isikukood</th>
+							<th>Makse meetod</th>
+							<th>Lisainfo</th>
+						</tr>
+					</thead>
+					<tbody>
+		@foreach (var item in Model.listParticipants)
+		{
+								<tr>
+
+									<td>@item.id</td>
+									<td>@item.firstName</td>
+									<td>@item.lastName</td>
+									<td>@item.securityNumber</td>
+									<td>@item.paymentMethod</td>
+									<td>@item.additionalInfo</td>
+									<td>
+										<a class="btn btn-primary btn-sm" href="/Participants/Edit?id=item.id">Muuda</a>
+										<a class="btn btn-danger btn-sm" href="/Participants/Delete?id=item.id">Kustuta</a>
+									</td>
+								</tr>
+		}
+					</tbody>
+					</table>
+				</div>
+		</div>
+
+	
+		
+		
